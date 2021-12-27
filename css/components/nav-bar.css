@@ -1,0 +1,52 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 16px 45px;
+  box-sizing: border-box;
+  /* border-box는 padding을 줬을때 원래 element에 주어진 사이즈를 유지하기 위해 박스를 늘리는 것을 방지. 사이즈를 안바꿔도 괜찮다~! */
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  position: relative;
+  color: #2e363e;
+}
+
+.nav__notification {
+  background-color: tomato;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  /* for text align */
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 14px;
+  bottom: 10px;
+}
+
+.nav__dot {
+  background-color: tomato;
+  width: 4px;
+  height: 3.5px;
+  border-radius: 2px;
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+}
+
+/* display: block nav__notification 가 span 이기에 
+근데 1이 원 가운데 있어야하니까 flex로 바꿔주면 자동으로 inline에서 block 해줌.
+그리고 position absolute는 가장 가까운 relative 를 가진 
+부모 기준으로 움직이기 때문에 nav_link를 relative해줌*/

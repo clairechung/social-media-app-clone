@@ -2,15 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <link rel="stylesheet" href="css/styles.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Welcome to Kokoa Clone</title>
 </head>
 
 <body>
-    <p>Yes!3rd</p>
-    <p>Bye!</p>
+   <div class="status-bar">
+      <!-- 클래스 길게 적어주는 이유는 어떤 칼럼인지 헷갈려서 부모 자식 둘다 적어주는 것 Block Element Modifiers -->
+      <div class="status-bar__column">
+         <span>No Service</span>
+         <i class="fas fa-wifi"></i>
+         </svg>
+      </div>
+      <div class="status-bar__column">
+         <span>11:27</span>
+      </div>
+      <div class="status-bar__column">
+         <span>100%</span>
+         <i class="fas fa-battery-half fa-lg"></i>
+         <i class="fas fa-bolt"></i>
+      </div>
+   </div>
+   <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header__text">
+         If you have a Account, log in with your email or phone number.</p>
+   </header>
+
+   <form action="friends.html" method="get" id="login-form">
+      <!-- get은 보안에 취약하지만 지금 서버가 없어서 get써야함. 다른 곳에 프로젝트를 올릴땐 post가 안먹힐 수도 있다. 개인정보는 get으로 보내면 안된다.  -->
+      <input name="username" type="text" placeholder="Email or phone number">
+      <input name="password" type="password" placeholder="password">
+      <input type="submit" value="Log In">
+      <a href="#">Find kakao Account or Password</a>
+   </form>
+
+
+
+   <script src="https://kit.fontawesome.com/2f097f84e8.js" crossorigin="anonymous"></script>
+
 </body>
+<!-- 스크립트는 항상 body태그 닫기 전 마지막에 있어야함 -->
 
 </html>

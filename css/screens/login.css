@@ -1,0 +1,40 @@
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+/* .login-form__input { -> 원래 방식을 따랐다면 이렇게 적었을 것. 아래는 id 이용한 다른 방식 */
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+/* .login-form__btn { -> 원래 방식을 따랐다면 이렇게 적었을 것. */
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgb(66, 66, 77, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+#login-form input::placeholder {
+  color: rgb(66, 66, 77, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+  /* border-width: 1.5px; 왜 얘는 하면 위에 텍스트가 움직이나,,*/
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+/* .login-form__a { -> 원래 방식을 따랐다면 이렇게 적었을 것. */
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+}
